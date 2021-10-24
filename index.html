@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CLASS 150</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="color:gray">
+      <a-camera wasd-controls-enabled="false" position="0 8 20"></a-camera>
+      <a-assets>
+        <a-assets-item id="t-obj" src="./models/tinker.obj"> </a-assets-item>
+        <a-assets-item id="t-mtl" src="./models/obj.mtl"> </a-assets-item>
+        <a-assets-item id="t-gltf" src="./models/glb-form.glb"> </a-assets-item>
+
+        <a-assets-item id="s-mtl" src="./models/sofa/obj.mtl"> </a-assets-item>
+        <a-assets-item id="s-gltf" src="./models/sofa/sofa.glb">
+        </a-assets-item>
+        <a-assets-item id="s-obj" src="./models/sofa/tinker.obj">
+        </a-assets-item>
+
+        <a-assets-item id="st-mtl" src="./models/stand/obj.mtl">
+        </a-assets-item>
+        <a-assets-item id="st-gltf" src="./models/stand/stand.glb">
+        </a-assets-item>
+        <a-assets-item id="st-obj" src="./models/stand/tinker.obj">
+        </a-assets-item>
+      </a-assets>
+
+      <a-circle
+        id="floor"
+        position="-0.4 -0.76 -25"
+        rotation="-90 0 0"
+        radius="100"
+        shadow="receive: true"
+        visible="true"
+        color="grey"
+      >
+      </a-circle>
+
+      <a-entity>
+        <a-box color="blue" position="0.076 -4 -39" width="50" height="50">
+        </a-box>
+        <a-box
+          color="orange"
+          rotation="0 -90 0"
+          position="25.5 -2.9 -15"
+          width="50"
+          height="50"
+        >
+        </a-box>
+        <a-box
+          color="orange"
+          rotation="0 -90 0"
+          position="-25.9 -3.4 -15"
+          width="50"
+          height="50"
+        >
+        </a-box>
+        <a-box
+          color="white"
+          rotation="90 0 0"
+          position="0 21.4 -15"
+          width="50"
+          height="50"
+        >
+        </a-box>
+      </a-entity>
+
+      <a-entity
+        obj-model="obj:#t-obj;mtl:#t-mtl"
+        position="19 0 9"
+        rotation="-90 -90 0"
+        scale="0.09 0.09 0.09"
+      >
+      </a-entity>
+
+      <a-entity
+        obj-model="obj:#s-obj;mtl:#s-mtl"
+        position="-6 0 -3"
+        rotation="-90 0 0"
+        scale="0.2 0.2 0.2"
+      >
+      </a-entity>
+
+      <a-entity
+        obj-model="obj:#st-obj;mtl:#st-mtl"
+        position="3 0 -1"
+        rotation="-90 0 0"
+        scale="0.17 0.17 0.17"
+      >
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
